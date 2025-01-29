@@ -11,7 +11,6 @@ var bgsound = document.getElementById("bgSound")
 
 
 
-// bluecar move
 blueCar.addEventListener("animationiteration", function(){
     bgsound.play()
     var random = ((Math.floor(Math.random() * 3)) * 100)
@@ -23,8 +22,6 @@ blueCar.addEventListener("animationiteration", function(){
    
 })
 
-
-//rececar move
 window.addEventListener("keydown", function(e){
    if(e.keyCode == "39"){ var raceCarLeft = parseInt(window.getComputedStyle(raceCar).getPropertyValue("left"))
     if(raceCarLeft < 260){raceCar.style.left = (raceCarLeft + 100) + "px"}
@@ -40,8 +37,6 @@ window.addEventListener("keydown", function(e){
     }
 })
 
-
-//Game over
 setInterval(function Gameover (){
     var blueCarTop = parseInt(window.getComputedStyle(blueCar).getPropertyValue("top"))
     var blueCarLeft = parseInt(window.getComputedStyle(blueCar).getPropertyValue("left"));
